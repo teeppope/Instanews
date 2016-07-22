@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var plumber = require('gulp-plumber');
 var eslint = require('gulp-eslint');
@@ -29,30 +30,30 @@ gulp.task('browser-sync', function() {
 });
 
 // ES lint example
-gulp.src(['**/*.js','!node_modules/**'])
-    .pipe(eslint({
-        rules: {
-            'my-custom-rule': 1,
-            'strict': 2
-        },
-        globals: [
-            'jQuery',
-            '$'
-        ],
-        envs: [
-            'browser'
-        ]
-    }))
-    .pipe(eslint.formatEach('compact', process.stderr));
+// gulp.src(['**/*.js','!node_modules/**'])
+//     .pipe(eslint({
+//         rules: {
+//             'my-custom-rule': 1,
+//             'strict': 2
+//         },
+//         globals: [
+//             'jQuery',
+//             '$'
+//         ],
+//         envs: [
+//             'browser'
+//         ]
+//     }))
+//     .pipe(eslint.formatEach('compact', process.stderr));
 
     //Gulp uglify example
 
-    gulp.task('compress', function (cb) {
-  pump([
-        gulp.src('lib/*.js'),
-        uglify(),
-        gulp.dest('dist')
-    ],
-    cb
-  );
-});
+//     gulp.task('compress', function (cb) {
+//   pump([
+//         gulp.src('lib/*.js'),
+//         uglify(),
+//         gulp.dest('dist')
+//     ],
+//     cb
+//   );
+// });
