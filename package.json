@@ -1,7 +1,7 @@
 {
-  "name": "instanews",
-  "version": "0.1.0",
-  "description": "project-2",
+  "name": "instanews-project",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,14 +18,7 @@
   "homepage": "https://github.com/teeppope/project2-instanews#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
-    "eslint": "^3.1.1",
-    "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-react": "^5.2.2",
     "gulp": "^3.9.1",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^1.5.4",
-    "pump": "^1.0.1",
-    "rename": "^1.0.3"
+    "gulp-sass": "^2.3.2"
   }
 }

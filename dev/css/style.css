@@ -84,6 +84,20 @@ footer{
 	height: 90vh;
 }
 
+.article-container{
+    
+}
+
+}
+.abstract-background{
+    background-color: rgba(0,0,0, .4);
+}
+.article-space{
+    margin-top: 2rem;
+    height: 400px;
+    width: 200px;
+}
+
 /* FORM STYLES */
 .choose{
 	font-size: .8rem;
@@ -112,7 +126,7 @@ footer{
 
 @media all and (min-width: 600px){
 .header-area{
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 }
 
 @media all and (min-width: 1000px){

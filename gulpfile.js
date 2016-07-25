@@ -1,59 +1,21 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var plumber = require('gulp-plumber');
-var eslint = require('gulp-eslint');
-var uglify = require('gulp-uglify');
-var pump = require('pump');
-var rename = require("gulp-rename");
+var gulp = require('gulp'),
+	sass = require('gulp-sass'),
+	browserSync = require('browser-sync').create();
 
-
-gulp.task('hello', function() {
-  console.log('Hello Terra');
-
-
-// NOT SURE IF I"LL NEED THE BELOW < BUT STILL FIGURING IT OUT :)
-
-  //Example of plumber task
-  gulp.src('./src/*.ext')
-    .pipe(plumber())
-    .pipe(gulp.dest('./dist'));
+gulp.task('hello', function(){
+	console.log('Hi Terra, this gulp task is working.')
 });
 
-// Static server
+gulp.task('sass',function(){
+ return gulp.src('./dev/css/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./build/css'));
+});
+
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./dev"
         }
     });
 });
-
-// ES lint example
-// gulp.src(['**/*.js','!node_modules/**'])
-//     .pipe(eslint({
-//         rules: {
-//             'my-custom-rule': 1,
-//             'strict': 2
-//         },
-//         globals: [
-//             'jQuery',
-//             '$'
-//         ],
-//         envs: [
-//             'browser'
-//         ]
-//     }))
-//     .pipe(eslint.formatEach('compact', process.stderr));
-
-    //Gulp uglify example
-
-//     gulp.task('compress', function (cb) {
-//   pump([
-//         gulp.src('lib/*.js'),
-//         uglify(),
-//         gulp.dest('dist')
-//     ],
-//     cb
-//   );
-// });
