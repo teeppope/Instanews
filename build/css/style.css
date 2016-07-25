@@ -31,7 +31,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: teal;
+  background-color: black;
   color: white;
   font-size: 16px;
   font-family: "Open Sans", Helvetica, sans-serif; }
@@ -69,6 +69,10 @@ a {
 
 .header-top {
   height: 10vh; }
+
+.loading img {
+  width: 50px;
+  height: 50px; }
 
 @media (min-width: 480px) {
   .article-grid {

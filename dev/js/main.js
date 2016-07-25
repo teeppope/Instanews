@@ -9,10 +9,10 @@ $(document).ready(function(){
 			url += '?' + $.param({'api-key': "140e5fd4387e4761a497e2670d92b49d"});
 		var articleItem="";
 		var $articleGrid = $('.article-grid');
-		var gif = './assets/images/ajax-loader.gif'
-		var loadingGif = ('<div class="loading">');
-			loadingGif += ('<img src="'+ gif +'" alt="Page Loader">');
-			loadingGif += ('</div>');
+		var gif = './assets/images/ajax-loader.gif';	
+		var loadingGif = '<div class="loading">';
+			loadingGif += 	'<img src="'+ gif +'" alt="Page Loader">';
+			loadingGif += '</div>';
 		var $articles = $('.articles');
 
 //Removing the articles before getting new ones
@@ -24,8 +24,6 @@ $(document).ready(function(){
 	// Loading gif
 		$articles.append(loadingGif);
 
-		console.log(loadingGif);
-
 		
 	// Calling NYT API	
 		$.ajax({
@@ -35,6 +33,8 @@ $(document).ready(function(){
 		})
 		.done(function(data) {
 			console.log(data);
+
+			$('.loading').remove();
 
 			var articleObject = data.results;
 			var i = 0;			  		
@@ -62,17 +62,15 @@ $(document).ready(function(){
 
 					 $articleGrid.append(articleItem);
 			  			
-			  			} // If bracket
+			  			} // If bracket multimedia brackets
 			  	
 		   	}); // each brackits
 		
 
-		  
-			  		
 
 		}); // .done brackets
 
-		$articlesGrid.remove(loadingGif);
+
 
 	}); //on change brackets
 
