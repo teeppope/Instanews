@@ -36,60 +36,69 @@ body {
   font-size: 16px;
   font-family: "Open Sans", Helvetica, sans-serif; }
 
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+a {
+  text-decoration: none;
+  color: white; }
 
-.contatiner {
-  width: 100%;
-  margin: 0 auto; }
-
-/*  HEADER STYLES */
-.header-area {
-  /*flex container styles*/
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  height: 90vh; }
-  @media (min-width: 600px) {
-    .header-area {
-      flex-flow: row wrap; } }
+.container {
+  margin: 0 auto;
+  width: 100%; }
 
 .header-area,
+.articles,
+.article-grid,
 .footer-area {
-  padding: 2rem; }
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center; }
+
+.header-area {
+  height: 90vh;
+  padding-bottom: 20px; }
+  @media (min-width: 600px) {
+    .header-area {
+      flex-flow: row wrap;
+      align-items: flex-start; } }
   @media (min-width: 1000px) {
-    .header-area,
-    .footer-area {
+    .header-area {
       justify-content: flex-start; } }
 
-.abstract-background {
-  background-color: rgba(0, 0, 0, 0.4); }
+.logo {
+  flex: 0 1 25%; }
 
-.article-space {
-  margin-top: 2rem;
-  height: 400px;
-  width: 200px; }
-
-/* FORM STYLES */
-.choose {
-  font-size: 12.8px;
-  font-weight: normal; }
-
-.choose,
-.topic-selector {
-  margin-top: 1.5rem; }
-
-/* FOOTER STYLES */
-.footer-area {
-  font-size: 12.8px;
+.header-top {
   height: 10vh; }
 
-.copy-right {
-  color: #c2c2c2;
-  margin-top: 2rem; }
+@media (min-width: 480px) {
+  .article-grid {
+    flex-flow: row wrap; } }
 
-.upper {
-  text-transform: uppercase; }
+.indv-article {
+  flex: 0 0 100%; }
+  @media (min-width: 480px) {
+    .indv-article {
+      flex: 0 0 50%; } }
+  @media (min-width: 1000px) {
+    .indv-article {
+      flex: 0 0 25%; } }
+
+.article-bkgrnd {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end; }
+
+.abstract {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .abstract p {
+    line-height: 1.5rem; }
+
+.footer-area {
+  height: 10vh; }
+  @media (min-width: 1000px) {
+    .footer-area {
+      align-items: flex-start; } }

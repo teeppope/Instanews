@@ -3,15 +3,31 @@ $(document).ready(function(){
 	$('select').on('change', function(event){
 		event.preventDefault();
 
+	//Declaring variables
 		var nytSection = $('option:selected').val();
 		var url = "https://api.nytimes.com/svc/topstories/v2/"+ nytSection +".json";
 			url += '?' + $.param({'api-key': "140e5fd4387e4761a497e2670d92b49d"});
 		var articleItem="";
-		var $articleContainer = $('.article-container');
+		var $articleGrid = $('.article-grid');
+		var gif = './assets/images/ajax-loader.gif'
+		var loadingGif = ('<div class="loading">');
+			loadingGif += ('<img src="'+ gif +'" alt="Page Loader">');
+			loadingGif += ('</div>');
+		var $articles = $('.articles');
 
-		//Removing the articles before getting new ones
-		$articleContainer.empty();
+//Removing the articles before getting new ones
+		$articleGrid.empty();
+		
+	//Moving the header items to the top
+		$('.header-area').css({'height': '30vh'});
 
+	// Loading gif
+		$articles.append(loadingGif);
+
+		console.log(loadingGif);
+
+		
+	// Calling NYT API	
 		$.ajax({
 			method: 'GET',
 			url: url,
@@ -29,18 +45,22 @@ $(document).ready(function(){
 				  	var articleAbstract= value.abstract,
 				  		articleLink= value.url;
 			
-				  		articleItem = '<li class="article-space" style="background-image: url('+value.multimedia[4].url+')">';
-						articleItem +=	'<div class="abstract-bkgnd">';
-						articleItem +=		'<p class="abstract-content">';
-						articleItem +=			articleAbstract;
-						articleItem +=		'</p>';
-						articleItem +=	'</div>';
+				  		articleItem = '<li class="indv-article">';
+						articleItem +=	'<a href="'+articleLink+'">';
+						articleItem +=		'<div class="article-bkgrnd" style="background-image: url('+value.multimedia[4].url+')">';
+						articleItem +=			'<div class="abstract">';
+						articleItem +=				'<p>';
+						articleItem +=					articleAbstract;
+						articleItem +=				'</p>';
+						articleItem +=			'</div>';
+						articleItem +=		'</div>';
+						articleItem += 	'</a>';
 						articleItem += '</li>';	
 						i++;
 				  
-					console.log(articleItem);
+					// console.log(articleItem);
 
-					 $articleContainer.append(articleItem);
+					 $articleGrid.append(articleItem);
 			  			
 			  			} // If bracket
 			  	
@@ -52,6 +72,7 @@ $(document).ready(function(){
 
 		}); // .done brackets
 
+		$articlesGrid.remove(loadingGif);
 
 	}); //on change brackets
 
