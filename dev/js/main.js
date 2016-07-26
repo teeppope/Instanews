@@ -19,7 +19,6 @@ $(document).ready(function(){
 		$articleGrid.empty();
 		
 	//Moving the header items to the top
-		// $('.header-area').css({'height': '30vh'});
 		$('header').addClass('header-shrink');
 	// Loading gif
 		$articleGrid.append(loadingGif);
@@ -32,10 +31,8 @@ $(document).ready(function(){
 			dataType: 'json',
 		})
 		.done(function(data) {
-			console.log(data);
 
-			
-
+	
 			var articleObject = data.results;
 			var i = 0;			  		
 			
@@ -58,7 +55,6 @@ $(document).ready(function(){
 						articleItem += '</li>';	
 						i++;
 				  
-					// console.log(articleItem);
 
 					 $articleGrid.append(articleItem);
 			  			
@@ -66,8 +62,6 @@ $(document).ready(function(){
 			  	
 		   	}); // each brackits
 		
-
-
 		}) // .done brackets
 		.fail(function(error){
 			$articles.append('<p class="error">Sorry! Something went wrong! Please choose a new section to read!</p>');
@@ -80,8 +74,5 @@ $(document).ready(function(){
 		$('.error').remove();
 	
 	}); //on change brackets
-
-
-
 
 }); //Document Ready brackits

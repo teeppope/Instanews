@@ -1,9 +1,10 @@
-@import('reset');
-@import('fonts');
-@import('variables');
-@import('base');
-@import('header');
-@import('articles');
+
+@import 'reset';
+@import 'fonts';
+@import 'variables';
+@import 'base';
+
+
 
 
 //Making Flex Containers Mobile
@@ -24,7 +25,9 @@
 		padding-left: $base-padding;
 	}
 }
+@import 'header';
 
+@import 'articles';
 
 .loading{
 	padding: 4rem;

@@ -5,6 +5,9 @@
 	.logo{
 		padding-bottom: $base-padding/2;
 		transition: all 1s ease;
+		@include tablet {
+			margin-right: $base-margin;
+		}
 		img {
 			width: 9.5rem;
 		}
@@ -15,9 +18,14 @@
 	}
 
 	@include tablet {
-		flex-flow: row wrap;
+		text-align: left;
+		flex-flow: row wrap;	
+	}
+	@include desktop {
 		justify-content: flex-start;
-		
+		.logo{
+			margin-right: $base-margin*2;
+		}
 	}
 	
 }
