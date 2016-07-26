@@ -1,52 +1,52 @@
 /**************************** FONTTTSSS ******************************/
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../../dev/assets/fonts/opensans-bold-webfont.eot');
-    src: url('../../dev/assets/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../dev/assets/fonts/opensans-bold-webfont.woff2') format('woff2'),
-         url('../../dev/assets/fonts/opensans-bold-webfont.woff') format('woff'),
-         url('../../dev/assets/fonts/opensans-bold-webfont.ttf') format('truetype'),
-         url('../../dev/assets/fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
-    font-weight: bold;
-    font-style: normal;
+	font-family: 'Open Sans';
+	src: url('../../dev/assets/fonts/opensans-bold-webfont.eot');
+	src: url('../../dev/assets/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../../dev/assets/fonts/opensans-bold-webfont.woff2') format('woff2'),
+	url('../../dev/assets/fonts/opensans-bold-webfont.woff') format('woff'),
+	url('../../dev/assets/fonts/opensans-bold-webfont.ttf') format('truetype'),
+	url('../../dev/assets/fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+	font-weight: bold;
+	font-style: normal;
 
- }
+}
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../../dev/assets/fonts/opensans-bolditalic-webfont.eot');
-    src: url('../../dev/assets/fonts/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../dev/assets/fonts/opensans-bolditalic-webfont.woff2') format('woff2'),
-         url('../../dev/assets/fonts/opensans-bolditalic-webfont.woff') format('woff'),
-         url('../../dev/assets/fonts/opensans-bolditalic-webfont.ttf') format('truetype'),
-         url('../../dev/assets/fonts/opensans-bolditalic-webfont.svg#open_sansbold_italic') format('svg');
-    font-weight: bold;
-    font-style: italic;
+	font-family: 'Open Sans';
+	src: url('../../dev/assets/fonts/opensans-bolditalic-webfont.eot');
+	src: url('../../dev/assets/fonts/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../../dev/assets/fonts/opensans-bolditalic-webfont.woff2') format('woff2'),
+	url('../../dev/assets/fonts/opensans-bolditalic-webfont.woff') format('woff'),
+	url('../../dev/assets/fonts/opensans-bolditalic-webfont.ttf') format('truetype'),
+	url('../../dev/assets/fonts/opensans-bolditalic-webfont.svg#open_sansbold_italic') format('svg');
+	font-weight: bold;
+	font-style: italic;
 
- }
+}
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../../dev/assets/fonts/opensans-light-webfont.eot');
-    src: url('../../dev/assets/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../dev/assets/fonts/opensans-light-webfont.woff2') format('woff2'),
-         url('../../dev/assets/fonts/opensans-light-webfont.woff') format('woff'),
-         url('../../dev/assets/fonts/opensans-light-webfont.ttf') format('truetype'),
-         url('../../dev/assets/fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Open Sans';
+	src: url('../../dev/assets/fonts/opensans-light-webfont.eot');
+	src: url('../../dev/assets/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../../dev/assets/fonts/opensans-light-webfont.woff2') format('woff2'),
+	url('../../dev/assets/fonts/opensans-light-webfont.woff') format('woff'),
+	url('../../dev/assets/fonts/opensans-light-webfont.ttf') format('truetype'),
+	url('../../dev/assets/fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
- }
+}
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../../dev/assets/fonts/opensans-lightitalic-webfont.eot');
-    src: url('../../dev/assets/fonts/opensans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../dev/assets/fonts/opensans-lightitalic-webfont.woff2') format('woff2'),
-         url('../../dev/assets/fonts/opensans-lightitalic-webfont.woff') format('woff'),
-         url('../../dev/assets/fonts/opensans-lightitalic-webfont.ttf') format('truetype'),
-         url('../../dev/assets/fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic') format('svg');
-    font-weight: normal;
-    font-style: italic;
+	font-family: 'Open Sans';
+	src: url('../../dev/assets/fonts/opensans-lightitalic-webfont.eot');
+	src: url('../../dev/assets/fonts/opensans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../../dev/assets/fonts/opensans-lightitalic-webfont.woff2') format('woff2'),
+	url('../../dev/assets/fonts/opensans-lightitalic-webfont.woff') format('woff'),
+	url('../../dev/assets/fonts/opensans-lightitalic-webfont.ttf') format('truetype'),
+	url('../../dev/assets/fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic') format('svg');
+	font-weight: normal;
+	font-style: italic;
 
- }
+}
 
 // Fontss
 $font-stack: 'Open Sans', Helvetica, sans-serif;
@@ -69,9 +69,9 @@ $tablet-width: 600px;
 $mobile-width: 480px;
 
 @mixin desktop{
-  @media (min-width: $desktop-width) {
-    @content;
-  }
+	@media (min-width: $desktop-width) {
+		@content;
+	}
 }
 
 @mixin tablet{
@@ -118,16 +118,18 @@ a {
 .header-area,
 .footer-area{
 	@include desktop {
-	padding-left: $base-padding;
+		padding-left: $base-padding;
 	}
 }
 .header-area{
 	height: 90vh;
-	margin-bottom: $base-margin - 6;
+	text-align: center;
+	
 	.logo{
-	padding-bottom: $base-padding;
+		padding-bottom: $base-padding/2;
+		transition: all 1s ease;
 		img {
-			width: 75%;
+			width: 9.5rem;
 		}
 	}
 
@@ -137,25 +139,30 @@ a {
 
 	@include tablet {
 		flex-flow: row wrap;
+		justify-content: flex-start;
+		
 	}
-	@include desktop {
-		justify-content:flex-start;
-	}
+	
 }
 .header-shrink{
-	height: 20vh;
-	padding: $base-padding/2;
-	.logo{ 
-		img{
-			width: 25%;
-			height: auto;
-		}
-	}
+	height: auto;
+	padding: $base-padding;
+	
 	@include tablet {
-		height: 20vh;
+		text-align: left;
+		.logo{
+			padding: 0 $base-padding*3 0 $base-padding*2;
+			img{
+				width: 6.5rem;
+			}
+		}	
+	}
+	@include desktop {
+		.logo{
+			padding-left: 0;
+		}	
 	}
 }
-
 
 .loading{
 	padding: 4rem;
@@ -164,6 +171,10 @@ a {
 		width: 50px;
 		height: 50px;
 	}
+}
+.error{
+	font-style: italic;
+	
 }
 .article-grid{
 	@include mobile {
@@ -209,122 +220,3 @@ a {
 		align-items: flex-start;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // BODY STYLES
-
-// *{
-// 	box-sizing: border-box;
-// }
-
-// body{
-// 	background-color: $black;
-// 	color: $white;
-// 	font-size: $base-fontsize;
-// 	font-family: $font-stack;
-// }
-// header{
-// 	display: flex;
-// 	flex-flow: column wrap;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-// footer{
-// 	display: flex;
-// 	align-items: center;
-// 	justify-content: center;
-// }
-// .contatiner{
-// 	width: 100%;
-// 	margin: 0 auto;
-// }
-
-
-// /*  HEADER STYLES */
-// .header-area{
-// 	/*flex container styles*/
-	
-// 	@include tablet {
-// 		flex-flow: row wrap;
-// 	}
-// 	height: 90vh;
-// }
-// .header-area,
-// .footer-area{
-// 	padding: $base-padding;
-	
-// 	@include desktop {
-// 		justify-content: flex-start;
-// 	}
-// }
-// .header-top {
-// 	justify-content: flex-start;
-// 	align-items:flex-start;
-// 	height: 10vh;
-// 	width: 100%;
-// }
-
-// // ARTCLE STYLES
-// .article-container{
-//     height: 80vh;
-//     width: 100%;
-//     display: flex;
-//     flex-flow: row wrap;
-	
-//     // @include tablet {
-
-//     // }
-//     // @include desktop {
-
-//     // }
-// }
-
-// .abstract-background{
-//     background-color: rgba(0,0,0, .4);
-// }
-// .article-space{
-//     margin-top: $base-margin;
-//     height: 400px;
-//     width: 100vw;
-// }
-
-// /* FORM STYLES */
-// .choose{
-// 	font-size: $base-fontsize / 1.25;
-// 	font-weight: normal;
-// }
-// .choose,
-// .topic-selector{
-// 	margin-top: $base-margin * .75;
-// }
-
-// /* FOOTER STYLES */
-// .footer-area{
-// 	font-size: $base-fontsize / 1.25;
-// 	height: 10vh;
-// }
-// .copy-right{
-// 	color: #c2c2c2;
-// 	margin-top: $base-margin;
-// }
-// .upper{
-// 	text-transform: uppercase;
-// }

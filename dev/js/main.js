@@ -9,7 +9,7 @@ $(document).ready(function(){
 			url += '?' + $.param({'api-key': "140e5fd4387e4761a497e2670d92b49d"});
 		var articleItem="";
 		var $articleGrid = $('.article-grid');
-		var gif = './assets/images/ajax-loader.gif';	
+		var gif = './dev/assets/images/ajax-loader.gif';	
 		var loadingGif = '<li class="loading">';
 			loadingGif += 	'<img src="'+ gif +'" alt="Page Loader">';
 			loadingGif += '</li>';
@@ -34,7 +34,7 @@ $(document).ready(function(){
 		.done(function(data) {
 			console.log(data);
 
-			$('.loading').remove();
+			
 
 			var articleObject = data.results;
 			var i = 0;			  		
@@ -74,7 +74,7 @@ $(document).ready(function(){
 
 		}) //.fail Brackets
 		.always(function(){
-			console.log('always(function()');
+			$('.loading').remove();
 		}); // .always brackets
 
 		$('.error').remove();
