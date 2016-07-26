@@ -21,4 +21,6 @@ Using jQuery was mostly a lot of trial and error trying to find the right method
 
 This project challeneged me, I left it a bit to the last minute, and so trying to develop under a tightish timeline left me wanting for a deeper understanding of javascript and for my past self to have procrastinated less. After this experience I know I want to get to understand javascript better, and just keep practicing it. I enjoyed traversing through the API, picking out key pieces of information and styling them. There was a lot of trial and error to sort through all the key pieces of information but this only helped me to understand the logic just even a little bit better. 
 
+I unfortunately did not get the time (by my own fault) to attempt the strecth goals for this project in time for the due date. I will however be attempting them after the due date for a challenge and more practice using jQuery!
+
 
