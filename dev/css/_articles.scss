@@ -1,0 +1,34 @@
+.article-grid{
+	@include mobile {
+		flex-flow: row wrap;
+	}
+}
+.indv-article{
+	flex: 0 0 100%;
+
+	@include mobile {
+		flex: 0 0 50%;
+
+	}
+	@include desktop {
+		flex: 0 0 25%;
+	}
+}
+.article-bkgrnd{
+	background-size: cover;
+	background-position: center;
+	height: 400px;
+	//to position the abstract
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-end;
+	
+}
+
+.abstract{
+	padding: $base-padding/2;
+	background-color: rgba(0,0,0,.6);
+	p {
+		line-height: $line-height;
+	}
+}

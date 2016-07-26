@@ -1,0 +1,42 @@
+.header-area{
+	height: 90vh;
+	text-align: center;
+	
+	.logo{
+		padding-bottom: $base-padding/2;
+		transition: all 1s ease;
+		img {
+			width: 9.5rem;
+		}
+	}
+
+	.choose{
+		padding-bottom: $base-padding * .5;
+	}
+
+	@include tablet {
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		
+	}
+	
+}
+.header-shrink{
+	height: auto;
+	padding: $base-padding;
+	
+	@include tablet {
+		text-align: left;
+		.logo{
+			padding: 0 $base-padding*3 0 $base-padding*2;
+			img{
+				width: 6.5rem;
+			}
+		}	
+	}
+	@include desktop {
+		.logo{
+			padding-left: 0;
+		}	
+	}
+}

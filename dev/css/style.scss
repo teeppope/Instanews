@@ -1,110 +1,13 @@
-/**************************** FONTTTSSS ******************************/
-@font-face {
-	font-family: 'Open Sans';
-	src: url('../../dev/assets/fonts/opensans-bold-webfont.eot');
-	src: url('../../dev/assets/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../../dev/assets/fonts/opensans-bold-webfont.woff2') format('woff2'),
-	url('../../dev/assets/fonts/opensans-bold-webfont.woff') format('woff'),
-	url('../../dev/assets/fonts/opensans-bold-webfont.ttf') format('truetype'),
-	url('../../dev/assets/fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
-	font-weight: bold;
-	font-style: normal;
+@import('reset');
+@import('fonts');
+@import('variables');
+@import('base');
+@import('header');
+@import('articles');
 
-}
-@font-face {
-	font-family: 'Open Sans';
-	src: url('../../dev/assets/fonts/opensans-bolditalic-webfont.eot');
-	src: url('../../dev/assets/fonts/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../../dev/assets/fonts/opensans-bolditalic-webfont.woff2') format('woff2'),
-	url('../../dev/assets/fonts/opensans-bolditalic-webfont.woff') format('woff'),
-	url('../../dev/assets/fonts/opensans-bolditalic-webfont.ttf') format('truetype'),
-	url('../../dev/assets/fonts/opensans-bolditalic-webfont.svg#open_sansbold_italic') format('svg');
-	font-weight: bold;
-	font-style: italic;
 
-}
-@font-face {
-	font-family: 'Open Sans';
-	src: url('../../dev/assets/fonts/opensans-light-webfont.eot');
-	src: url('../../dev/assets/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../../dev/assets/fonts/opensans-light-webfont.woff2') format('woff2'),
-	url('../../dev/assets/fonts/opensans-light-webfont.woff') format('woff'),
-	url('../../dev/assets/fonts/opensans-light-webfont.ttf') format('truetype'),
-	url('../../dev/assets/fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
-	font-weight: normal;
-	font-style: normal;
-
-}
-@font-face {
-	font-family: 'Open Sans';
-	src: url('../../dev/assets/fonts/opensans-lightitalic-webfont.eot');
-	src: url('../../dev/assets/fonts/opensans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../../dev/assets/fonts/opensans-lightitalic-webfont.woff2') format('woff2'),
-	url('../../dev/assets/fonts/opensans-lightitalic-webfont.woff') format('woff'),
-	url('../../dev/assets/fonts/opensans-lightitalic-webfont.ttf') format('truetype'),
-	url('../../dev/assets/fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic') format('svg');
-	font-weight: normal;
-	font-style: italic;
-
-}
-
-// Fontss
-$font-stack: 'Open Sans', Helvetica, sans-serif;
-$base-fontsize: 16px;
-$line-height: 1.5rem;
-
-// Colour Variables
-$black: teal;
-$white: white;
-$light-grey: #c2c2c2;
-$black-overlay: rgba(0,0,0,.5);
-
-// Spacing
-$base-margin: 2rem;
-$base-padding: 2rem;
-
-//Media queries
-$desktop-width: 1000px;
-$tablet-width: 600px;
-$mobile-width: 480px;
-
-@mixin desktop{
-	@media (min-width: $desktop-width) {
-		@content;
-	}
-}
-
-@mixin tablet{
-	@media (min-width: $tablet-width){
-		@content;
-	}
-}
-@mixin mobile{
-	@media (min-width: $mobile-width){
-		@content;
-	}
-}
-// Base body Styles
-* {
-	box-sizing: border-box;
-	outline: none;
-}
-
-body {
-	background-color: $black;
-	color: white;
-	font-size: $base-fontsize;
-	font-family: $font-stack;
-}
-a {
-	text-decoration: none;
-	color: $white;
-}
-.container{
-	margin: 0 auto;
-	width: 100%;
-}
 //Making Flex Containers Mobile
+
 .header-area,
 .header-shrink,
 .articles,
@@ -121,48 +24,7 @@ a {
 		padding-left: $base-padding;
 	}
 }
-.header-area{
-	height: 90vh;
-	text-align: center;
-	
-	.logo{
-		padding-bottom: $base-padding/2;
-		transition: all 1s ease;
-		img {
-			width: 9.5rem;
-		}
-	}
 
-	.choose{
-		padding-bottom: $base-padding * .5;
-	}
-
-	@include tablet {
-		flex-flow: row wrap;
-		justify-content: flex-start;
-		
-	}
-	
-}
-.header-shrink{
-	height: auto;
-	padding: $base-padding;
-	
-	@include tablet {
-		text-align: left;
-		.logo{
-			padding: 0 $base-padding*3 0 $base-padding*2;
-			img{
-				width: 6.5rem;
-			}
-		}	
-	}
-	@include desktop {
-		.logo{
-			padding-left: 0;
-		}	
-	}
-}
 
 .loading{
 	padding: 4rem;
@@ -176,43 +38,6 @@ a {
 	font-style: italic;
 	
 }
-.article-grid{
-	@include mobile {
-		flex-flow: row wrap;
-
-	}
-}
-.indv-article{
-	flex: 0 0 100%;
-
-	@include mobile {
-		flex: 0 0 50%;
-
-	}
-	@include desktop {
-		flex: 0 0 25%;
-
-	}
-}
-.article-bkgrnd{
-	background-size: cover;
-	background-position: center;
-	height: 400px;
-	//to position the abstract
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: flex-end;
-	
-}
-
-.abstract{
-	padding: $base-padding/2;
-	background-color: rgba(0,0,0,.6);
-	p {
-		line-height: $line-height;
-	}
-}
-
 .footer-area{
 	height: 10vh;
 	color: $light-grey;

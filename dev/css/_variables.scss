@@ -1,0 +1,36 @@
+// Fontss
+$font-stack: 'Open Sans', Helvetica, sans-serif;
+$base-fontsize: 16px;
+$line-height: 1.5rem;
+
+// Colour Variables
+$black: teal;
+$white: white;
+$light-grey: #c2c2c2;
+$black-overlay: rgba(0,0,0,.5);
+
+// Spacing
+$base-margin: 2rem;
+$base-padding: 2rem;
+
+//Media queries
+$desktop-width: 1000px;
+$tablet-width: 600px;
+$mobile-width: 480px;
+
+@mixin desktop{
+	@media (min-width: $desktop-width) {
+		@content;
+	}
+}
+
+@mixin tablet{
+	@media (min-width: $tablet-width){
+		@content;
+	}
+}
+@mixin mobile{
+	@media (min-width: $mobile-width){
+		@content;
+	}
+}
