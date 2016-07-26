@@ -10,19 +10,19 @@ $(document).ready(function(){
 		var articleItem="";
 		var $articleGrid = $('.article-grid');
 		var gif = './assets/images/ajax-loader.gif';	
-		var loadingGif = '<div class="loading">';
+		var loadingGif = '<li class="loading">';
 			loadingGif += 	'<img src="'+ gif +'" alt="Page Loader">';
-			loadingGif += '</div>';
+			loadingGif += '</li>';
 		var $articles = $('.articles');
 
 //Removing the articles before getting new ones
 		$articleGrid.empty();
 		
 	//Moving the header items to the top
-		$('.header-area').css({'height': '30vh'});
-
+		// $('.header-area').css({'height': '30vh'});
+		$('header').addClass('header-shrink');
 	// Loading gif
-		$articles.append(loadingGif);
+		$articleGrid.append(loadingGif);
 
 		
 	// Calling NYT API	
@@ -68,10 +68,17 @@ $(document).ready(function(){
 		
 
 
-		}); // .done brackets
+		}) // .done brackets
+		.fail(function(error){
+			$articles.append('<p class="error">Sorry! Something went wrong! Please choose a new section to read!</p>');
 
+		}) //.fail Brackets
+		.always(function(){
+			console.log('always(function()');
+		}); // .always brackets
 
-
+		$('.error').remove();
+	
 	}); //on change brackets
 
 
