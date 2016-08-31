@@ -8,7 +8,7 @@ $(document).ready(function(){
 	//Declaring variables
 	var nytSection = $('option:selected').val();
 	var url = "https://api.nytimes.com/svc/topstories/v2/"+ nytSection +".json";
-		url += '?' + $.param({'api-key': "140e5fd4387e4761a497e2670d92b49d"});
+		url += '?' + $.param({'api-key': "938dc4cd48474167800b4e8ebd56bbe1"});
 	var articleItem= "";
 	var $articleGrid = $('.article-grid');
 	
