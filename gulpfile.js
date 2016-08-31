@@ -8,9 +8,6 @@ var gulp = require('gulp'),
 var sassFiles = './dev/css/**/*.scss',
     jsFiles = './dev/js/**/*.js';
 
-gulp.task('hello', function(){
-	console.log('Hi Terra, this gulp task is working.')
-});
 
 gulp.task('sass',function(){
  return gulp.src(sassFiles)

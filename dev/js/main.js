@@ -1,5 +1,7 @@
 $(document).ready(function(){
-	
+
+	console.log('Heyyyy');	
+
 	$('select').on('change', function(event){
 		event.preventDefault();
 
