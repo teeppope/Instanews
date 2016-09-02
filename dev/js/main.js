@@ -9,14 +9,14 @@ $(document).ready(function(){
 		//Declaring variables
 		var nytSection = $('option:selected').val();
 		var url = "https://api.nytimes.com/svc/topstories/v2/"+ nytSection +".json";
-			url += '?' + $.param({'api-key': "938dc4cd48474167800b4e8ebd56bbe1"});
+		url += '?' + $.param({'api-key': "938dc4cd48474167800b4e8ebd56bbe1"});
 		var articleItem= "";
 		var $articleGrid = $('.article-grid');
 		
 		var gif = './build/assets/images/ajax-loader.gif';	
 		var loadingGif = '<li class="loading">';
-			loadingGif += 	'<img src="'+ gif +'" alt="Page Loader">';
-			loadingGif += '</li>';
+		loadingGif += 	'<img src="'+ gif +'" alt="Page Loader">';
+		loadingGif += '</li>';
 		var $articles = $('.articles');
 
 		//Removing the articles before getting new ones
@@ -43,20 +43,20 @@ $(document).ready(function(){
 
 				if(value.multimedia.length && i < 12){
 					var articleAbstract= value.abstract,
-						articleLink= value.url;
+					articleLink= value.url;
 
-						articleItem = '<li class="indv-article">';
-						articleItem +=	'<a href="'+articleLink+'">';
-						articleItem +=		'<div class="article-bkgrnd" style="background-image: url('+value.multimedia[4].url+')">';
-						articleItem +=			'<div class="abstract">';
-						articleItem +=				'<p>';
-						articleItem +=					articleAbstract;
-						articleItem +=				'</p>';
-						articleItem +=			'</div>';
-						articleItem +=		'</div>';
-						articleItem += 	'</a>';
-						articleItem += '</li>';	
-						i++;
+					articleItem = '<li class="indv-article">';
+					articleItem +=	'<a href="'+articleLink+'">';
+					articleItem +=		'<div class="article-bkgrnd" style="background-image: url('+value.multimedia[4].url+')">';
+					articleItem +=			'<div class="abstract">';
+					articleItem +=				'<p>';
+					articleItem +=					articleAbstract;
+					articleItem +=				'</p>';
+					articleItem +=			'</div>';
+					articleItem +=		'</div>';
+					articleItem +=	'</a>';
+					articleItem += '</li>';	
+					i++;
 
 					$articleGrid.append(articleItem);
 				} // If bracket multimedia brackets

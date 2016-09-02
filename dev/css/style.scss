@@ -1,51 +1,16 @@
+/* MAIN SCSS FILE, import needed partials */
 
+// Unseen partials being imported
 @import 'reset';
 @import 'fonts';
 @import 'variables';
+@import 'mixins';
+
+// Content Styles
 @import 'base';
-
-
-
-
-//Making Flex Containers Mobile
-
-.header-area,
-.header-shrink,
-.articles,
-.article-grid,
-.footer-area{
-	display:flex;
-	flex-flow: column;
-	justify-content:center;
-	align-items: center;
-}
-.header-area,
-.footer-area{
-	@include desktop {
-		padding-left: $base-padding;
-	}
-}
 @import 'header';
-
 @import 'articles';
 
-.loading{
-	padding: 4rem;
-	height: 50vh;
-	img {
-		width: 50px;
-		height: 50px;
-	}
-}
-.error{
-	font-style: italic;
-	padding: 8rem 0;
-	
-}
-.footer-area{
-	height: 10vh;
-	color: $light-grey;
-	@include desktop {
-		align-items: flex-start;
-	}
-}
+
+
+

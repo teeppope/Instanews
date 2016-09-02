@@ -1,7 +1,11 @@
+/* HEADER STYLES FOR INSTANEWS */
+
+
+//Base header styles
 .header-area{
 	height: 90vh;
 	text-align: center;
-	
+
 	.logo{
 		padding-bottom: $base-padding/2;
 		transition: all 1s ease;
@@ -12,11 +16,9 @@
 			width: 9.5rem;
 		}
 	}
-
 	.choose{
 		padding-bottom: $base-padding * .5;
 	}
-
 	@include tablet {
 		text-align: left;
 		flex-flow: row wrap;	
@@ -27,11 +29,12 @@
 			margin-right: $base-margin*2;
 		}
 	}
-	
 }
+//Header styles for when a news selection is chosen.
 .header-shrink{
 	height: auto;
 	padding: $base-padding;
+	transition: all ease 0.6s;
 	
 	@include tablet {
 		text-align: left;

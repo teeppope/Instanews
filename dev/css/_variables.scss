@@ -1,9 +1,12 @@
-// Fontss
+/* VARIABLES FOR INSTANEWS */
+
+
+// Typography
 $font-stack: 'Open Sans', Helvetica, sans-serif;
 $base-fontsize: 16px;
 $line-height: 1.5rem;
 
-// Colour Variables
+// Colours
 $black: black;
 $white: white;
 $light-grey: #c2c2c2;
@@ -17,20 +20,3 @@ $base-padding: 2rem;
 $desktop-width: 1000px;
 $tablet-width: 600px;
 $mobile-width: 480px;
-
-@mixin desktop{
-	@media (min-width: $desktop-width) {
-		@content;
-	}
-}
-
-@mixin tablet{
-	@media (min-width: $tablet-width){
-		@content;
-	}
-}
-@mixin mobile{
-	@media (min-width: $mobile-width){
-		@content;
-	}
-}

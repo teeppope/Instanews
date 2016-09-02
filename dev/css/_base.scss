@@ -1,4 +1,6 @@
-// Base body Styles
+/* BASE LAYOUT STYLES FOR INSTANEWS */
+
+// Base body layout Styles
 * {
 	box-sizing: border-box;
 	outline: none;
@@ -9,6 +11,7 @@ body {
 	color: white;
 	font-size: $base-fontsize;
 	font-family: $font-stack;
+	line-height: $line-height;
 }
 a {
 	text-decoration: none;
@@ -17,4 +20,29 @@ a {
 .container{
 	margin: 0 auto;
 	width: 100%;
+}
+
+//Flexing Content Areas
+.header-area,
+.header-shrink,
+.articles,
+.article-grid,
+.footer-area{
+	display:flex;
+	flex-flow: column;
+	justify-content:center;
+	align-items: center;
+}
+.header-area,
+.footer-area{
+	@include desktop {
+		padding-left: $base-padding;
+	}
+}
+.footer-area{
+	height: 10vh;
+	color: $light-grey;
+	@include desktop {
+		align-items: flex-start;
+	}
 }

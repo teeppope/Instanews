@@ -1,11 +1,12 @@
-//Styles for the generated articles
+/* CONTENT STYLES FOR INSTANEWS */
 
-
+//Flex the article list
 .article-grid{
 	width: 100vw;
 	flex-flow: row wrap;
-
 }
+
+//Position Each Article
 .indv-article{
 	position: relative;
 	flex: 0 0 100%;
@@ -16,7 +17,9 @@
 	@include desktop {
 		flex: 0 0 25%;
 	}
+
 	&:hover{
+		//show abstract on hover
 		.abstract{
 			height: auto;
 			bottom: 0;
@@ -24,21 +27,34 @@
 		}
 	}
 }
+
+//Set BG-Image Styles
 .article-bkgrnd{
 	background-size: cover;
 	background-position: top;
 	height: 25rem;
-
 }
+
+//Hide abstract
 .abstract{
 	position: absolute;
 	padding: $base-padding;
 	background-color: rgba(0,0,0,.5);
-	height: 0px;
-	bottom: -10rem;
-	
-	p {
-		line-height: $line-height;
-	}	
+	height: 0rem;
+	bottom: -10rem;	
+}
 
+//Generic content styles
+.loading{
+	padding: 4rem;
+	height: 50vh;
+	img {
+		width: 3.125rem;
+		height: 3.125rem;
+	}
+}
+.error{
+	font-style: italic;
+	padding: 8rem 0;
+	
 }
