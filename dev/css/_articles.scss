@@ -9,6 +9,7 @@
 .indv-article{
 	position: relative;
 	flex: 0 0 100%;
+	overflow: hidden;
 	@include tablet {
 		flex: 0 0 50%;
 	}
@@ -17,9 +18,6 @@
 	}
 	&:hover{
 		.abstract{
-			padding: $base-padding;
-			color: white;
-			background-color: rgba(0,0,0,.5);
 			height: auto;
 			bottom: 0;
 			transition: all ease .6s;
@@ -34,10 +32,11 @@
 }
 .abstract{
 	position: absolute;
-	background-color: transparent;
-	color: transparent;
+	padding: $base-padding;
+	background-color: rgba(0,0,0,.5);
 	height: 0px;
-	overflow: hidden;
+	bottom: -10rem;
+	
 	p {
 		line-height: $line-height;
 	}	
