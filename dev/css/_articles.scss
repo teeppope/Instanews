@@ -1,34 +1,45 @@
+//Styles for the generated articles
+
+
 .article-grid{
-	@include mobile {
-		flex-flow: row wrap;
-	}
+	width: 100vw;
+	flex-flow: row wrap;
+
 }
 .indv-article{
+	position: relative;
 	flex: 0 0 100%;
-
-	@include mobile {
+	@include tablet {
 		flex: 0 0 50%;
-
 	}
 	@include desktop {
 		flex: 0 0 25%;
 	}
+	&:hover{
+		.abstract{
+			padding: $base-padding;
+			color: white;
+			background-color: rgba(0,0,0,.5);
+			height: auto;
+			bottom: 0;
+			transition: all ease .6s;
+		}
+	}
 }
 .article-bkgrnd{
 	background-size: cover;
-	background-position: center;
-	height: 400px;
-	//to position the abstract
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: flex-end;
-	
-}
+	background-position: top;
+	height: 25rem;
 
+}
 .abstract{
-	padding: $base-padding/2;
-	background-color: rgba(0,0,0,.6);
+	position: absolute;
+	background-color: transparent;
+	color: transparent;
+	height: 0px;
+	overflow: hidden;
 	p {
 		line-height: $line-height;
-	}
+	}	
+
 }

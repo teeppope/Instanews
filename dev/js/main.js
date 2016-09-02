@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 	console.log('Heyyyy');	
 
-
 	$('select').heapbox({
 		'onChange':function(){
 			event.preventDefault();
@@ -42,7 +41,7 @@ $(document).ready(function(){
 
 			$.each(articleObject, function(index, value){
 
-				if(value.multimedia.length && i < 8){
+				if(value.multimedia.length && i < 12){
 					var articleAbstract= value.abstract,
 						articleLink= value.url;
 
